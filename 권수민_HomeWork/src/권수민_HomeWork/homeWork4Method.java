@@ -1,8 +1,32 @@
 package 권수민_HomeWork;
 
 import java.util.Scanner;
-
-public class homeWork4 {
+public class homeWork4Method {
+	private static Scanner sc = new Scanner(System.in);
+	
+	static Item[] itemAry = null;
+	static int itemNo= 0;
+	public static int itemNum() {
+		
+		
+			System.out.println("상품 수>");
+			int itemNum = Integer.parseInt(sc.nextLine());
+			itemAry= new Item[itemNum];
+			return itemNum;
+		
+	}
+	public static String itemName() {
+		
+		
+		System.out.println("상품명, 가격입력>");
+		for(int i = 0; i<itemAry.length;i++) {
+			String b = sc.nextLine();
+			int a = Integer.parseInt(sc.nextLine());
+			Item i1 = new Item (b,a);
+			itemAry[i]=i1;
+			return itemName;
+		}
+}
 	public static void main(String[] args) {
 		// 문제2) 다음은 키보드로부터 상품 수와 상품 가격을 입력받아서
 		// 최고 가격을 가지는 제품과 해당 제품을 제외한 제품들의 총 합을 구하는 프로그램을 작성하세요.
@@ -15,28 +39,20 @@ public class homeWork4 {
 		// 5) 종료 시에는 프로그램을 종료한다고 메세지를 출력하도록 구현하세요.
 		
 
-	Scanner sc = new Scanner(System.in);
-	Item[] itemAry = null;
-	int itemNum = 0;
+	
 	while (true) {
 		System.out.println("============================================================");
 		System.out.println("1. 상품 수 | 2. 상품 및 가격입력 | 3. 재품별 가격 | 4. 분석 | 5. 종료");
 		System.out.println("============================================================");
-		
 		int itemNo = Integer.parseInt(sc.nextLine());
 		
+	}
+
+		
 		if(itemNo == 1) {
-			System.out.println("상품 수>");
-			itemNum = Integer.parseInt(sc.nextLine());
-			itemAry= new Item[itemNum];
+			itemNum();
 		}else if (itemNo == 2) {
-			System.out.println("상품명, 가격입력>");
-			for(int i = 0; i<itemAry.length;i++) {
-				String b = sc.nextLine();
-				int a = Integer.parseInt(sc.nextLine());
-				Item i1 = new Item (b,a);
-				itemAry[i]=i1;
-			}
+			itemName();
 		}else if (itemNo == 3) {
 			for (Item i1 : itemAry) {
 				i1.getInfo();
@@ -59,6 +75,4 @@ public class homeWork4 {
 		}
 	}
 	}
-}
-
 
