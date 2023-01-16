@@ -17,7 +17,7 @@ public class Main {
 		switch(no) {
 		case 1 :
 			size = Integer.parseInt(sc.nextLine());
-			if(10<size || 5>size) {
+			if(10<size && 5>size) {
 				System.out.println("5~10을 입력해주세요");
 				continue;
 			}
