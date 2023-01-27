@@ -37,7 +37,7 @@ public class EmpMain {
 
 	// 목록조회
 	public void list() { // static메소드 or 인스턴스메소드 구분필요!
-		List<Map<String, Object>> result = dao.empList(); // 반환유형.
+//		List<Map<String, Object>> result = dao.empList(); // 반환유형.
 //		for (Map<String, Object> map : result) {
 //			System.out.println("사원번호 : " + map.get("emp_id") + ", 이름 : " + map.get("first_name") + "-"
 //					+ map.get("last_name"));
